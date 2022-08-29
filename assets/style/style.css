@@ -1,0 +1,292 @@
+html,
+body{
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* background-image: url(images/netflix-background.jpg); */
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: #fff; */
+    /* box-sizing: border-box; */
+}
+
+.wrapper{
+    min-width: 1050px;
+    min-height: 100%;
+    background-color: #141414;
+}
+
+.sign-in-container{
+    /* background-color: #efefee; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-container{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.493) 0%, rgba(0, 0, 0, 0.39) 100%), url(images/netflix-background.jpg);
+}
+
+.column{
+    background-color: black;
+    min-height: 300px;
+    max-height: 90%;
+    width: 450px;
+    opacity: 0.85;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px; */
+    padding: 25px 35px;
+     overflow-y: auto;
+}
+
+.column form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.column form input[type="text"],
+.column form input[type="email"],
+.column form input[type="password"]{
+    font-size:17px;
+    margin:10px 0;
+    /* border: none; */
+    height: 40px;
+    background-color: #444444;
+    border-radius: 4px;
+    color: #fff;
+    /* border-bottom: 1px solid #dedede; */
+}
+
+::placeholder{
+    color: #fff;
+}
+
+.column form input[type="submit"]{
+    background-color: red;
+    color:#fff;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.header{
+    padding: 20px 0;
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0;
+    padding-top: 16px;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.logo{
+    width: 180px;
+    height: 66px;
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+.signInMessage{
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.errorMessage{
+    color: #e87c03;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.previewImage,
+.previewVideo{
+    width: 100%;
+}
+
+.previewContainer{
+    position:relative;
+    display:flex;
+}
+
+.previewContainer.small{
+    width: 246px;
+    height: 138px;
+    margin-right: 4px;
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+ .previewContainer.small img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.previewOverlay{
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position:absolute;
+}
+
+.previewOverlay .mainDetails h3{
+    color: #fff;
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.previewOverlay .mainDetails{
+    position: relative;
+    top: 35%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainDetails button{
+    background-color: rgba(255, 255, 255, 0.973);
+    color: #000;
+    border: none;
+    width: 125px;
+    min-width: 125px;
+    padding: 0 38px;
+    height: 40px;
+    min-height: 40px;
+    font-size: 16px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+button i{
+    color: inherit; 
+}
+
+.mainDetails button:hover{
+    background-color: rgb(209, 207, 207);
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    margin-left: 25px;
+}
+
+.category h3{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.category h3:hover{
+    color: rgba(247, 245, 245, 0.842);
+}
+
+.entities ,
+.videos{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+a{
+    text-decoration: none;
+}
+
+.errorBanner{
+    color: #fff;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.season{
+    display: flex ;
+    flex-direction: column;
+    padding: 10px 50px;
+}
+
+.season h3{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.episodeContainer{
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.episodeContainer .contents{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    padding-left: 10px;
+}
+
+.episodeContainer img{
+    width: 238px;
+    height: 129px;
+    object-fit: cover;
+}
+
+.episodeContainer h4,
+.episodeContainer .videoInfo span{
+    color: #fff;
+    width: 100%;
+    white-space: normal;
+}
+
+.episodeContainer .videoInfo{
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.previewCategories.noScroll .category .entities{
+    white-space: normal;
+}
+
+.watchContainer video{
+    width: 100%;
+}
+
+.videoControls{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.videoControls h1{
+    color: #fff;
+}
+
+.videoControls button{
+    font-size: 50px;
+    padding: 50px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
